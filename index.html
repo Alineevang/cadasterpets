@@ -10,38 +10,46 @@
 </head>
 
 <body>
+
+    <h1>Clínica Veterinária</h1>
+    <div id="botoes">
+    <button id="buttoncadastro" onclick="voltinha()">Cadastro</button>
+    <button id="buttonexibicao" onclick="renderizarConteudo()">Exibição</button>
+</div>
+
     <div id="container">
         <h2 id="tituloprincipal">
-            Clínica Veterinária
+           C A D A S T R O 🐶
         </h2>
 
-        <div id="stylecontainer">
-            <div id="inputcontainer">
-                <label for="label-tutor" class="label">Tutor(a)</label>
-                <input type="text" id="input-tutor" name="input-tutor" class="input">
 
-                <label for="label-nome" class="label">Nome do Pet</label>
-                <input type="text" id="input-nome" name="input-nome" class="input">
+        <div id="inputcontainer">
+            <label for="label-tutor" class="label">Tutor(a)</label>
+            <input type="text" id="input-tutor" name="input-tutor" class="input">
 
-                <label for="label-especie" class="label">Espécie</label>
-                <input type="text" id="input-especie" name="input-especie" class="input">
+            <label for="label-nome" class="label">Nome do Pet</label>
+            <input type="text" id="input-nome" name="input-nome" class="input">
 
-                <label for="label-fotinha" class="label">Fotinha</label>
-                <input type="text" id="input-fotinha" name="input-fotinha" class="input">
+            <label for="label-especie" class="label">Espécie</label>
+            <input type="text" id="input-especie" name="input-especie" class="input">
 
-                <label for="label-birthday" class="label">Data de Nascimento</label>
-                <input type="date" id="input-birthday" name="input-birthday" class="input">
+            <label for="label-fotinha" class="label">Fotinha</label>
+            <input type="text" id="input-fotinha" name="input-fotinha" class="input">
 
-                <div id="msg"></div>
-                <button id="botao-cadastrar" class="botao" onclick="cadastrarPets()">Cadastrar</button>
+            <label for="label-birthday" class="label">Data de Nascimento</label>
+            <input type="date" id="input-birthday" name="input-birthday" class="input">
 
-            </div>
+            <div id="msg"></div>
+            <button id="botao-cadastrar" class="botao" onclick="cadastrarPets()">Cadastrar</button>
+
         </div>
     </div>
 
-    <div id="containerLista">
+    <div id="containerLista" class="hidden">
 
     </div>
+
+    <footer>© Todos os direitos reservados</footer>
 
 </body>
 

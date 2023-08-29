@@ -103,6 +103,10 @@ function limparInputs() {
 }
 
 function renderizarConteudo() {
+    document.getElementById("container").classList.add("hidden");
+    document.getElementById("containerLista").classList.remove("hidden");
+
+
     const listaHTML = document.getElementById('containerLista');
     listaHTML.innerHTML = '';
 
@@ -116,11 +120,25 @@ function renderizarConteudo() {
         <h2>Tutor(a): ${pet.tutor}</h2>
         <p>Nome: ${pet.nome}</p>
         <p>Espécie: ${pet.especie}</p>
-        <p>Aniversário: ${pet.birthday}</p>
+        <p>Aniversário: ${dateinPTBR(pet.birthday)}</p>
         <p>Idade: ${pet.idade}</p>
         <img src="${pet.foto}" alt="${pet.titulo}">
         `;
 
         listaHTML.innerHTML += petDiv;
     })
+}
+
+function voltinha() {
+    document.getElementById("container").classList.remove("hidden");
+    document.getElementById("containerLista").classList.add("hidden");
+
+}
+
+function dateinPTBR(birthday) {
+    console.log("Passou pela funcao dateinPTBR()");
+
+    let dateArray = birthday.split("-");
+    let datePTBR = dateArray[2] + "/" + dateArray[1] + "/" + dateArray[0];
+    return datePTBR;
 }
