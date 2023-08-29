@@ -113,7 +113,7 @@ function renderizarConteudo() {
     array.forEach(pet => {
         const petDiv = `
         <div class='petDetalhe'>
-        <h2>Tutor: ${pet.tutor}</h2>
+        <h2>Tutor(a): ${pet.tutor}</h2>
         <p>Nome: ${pet.nome}</p>
         <p>Espécie: ${pet.especie}</p>
         <p>Aniversário: ${pet.birthday}</p>
