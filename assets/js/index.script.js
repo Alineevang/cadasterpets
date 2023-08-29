@@ -43,8 +43,21 @@ class Pets {
         this.especie = especie;
         this.foto = foto;
         this.birthday = birthday;
+        this.idade = this.calcularIdade(birthday);
+    }
+    
+    calcularIdade(idade) {
+        const newDate = new Date (idade);
+        const yearDate = newDate.getFullYear()
+        
+        const todayDate = new Date ();
+        const nowDate = todayDate.getFullYear();
+
+        const age = nowDate - yearDate;
+        return age
     }
 }
+
 
 const petsTeste = new Pets ("Aline", "Marshall", "Pastor-alemão", "...", "12/04/2022");
 console.log(petsTeste);
@@ -100,10 +113,11 @@ function renderizarConteudo() {
     array.forEach(pet => {
         const petDiv = `
         <div class='petDetalhe'>
-        <h2>Título: ${pet.tutor}</h2>
+        <h2>Tutor: ${pet.tutor}</h2>
         <p>Nome: ${pet.nome}</p>
         <p>Espécie: ${pet.especie}</p>
         <p>Aniversário: ${pet.birthday}</p>
+        <p>Idade: ${pet.idade}</p>
         <img src="${pet.foto}" alt="${pet.titulo}">
         `;
 
