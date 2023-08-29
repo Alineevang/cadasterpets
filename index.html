@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,36 @@
 </head>
 
 <body>
-    
+    <div id="container">
+        <h2 id="tituloprincipal">
+        Clínica Veterinária
+        </h2>
+
+        <div id="labelcontainer">
+            <div id="inputcontainer">
+
+                <label for="label-tutor">Tutor</label>
+                <input type="text" id="input-tutor" name="input-tutor" class="input">
+
+                <label for="label-nome">Nome do Pet</label>
+                <input type="text" id="input-nome" name="input-nome" class="input">
+
+                <label for="label-especie">Espécie</label>
+                <input type="text" id="input-especie" name="input-especie" class="input">
+
+                <label for="label-fotinha">Fotinha</label>
+                <input type="text" id="input-fotinha" name="input-fotinha" class="input">
+
+                <label for="label-birthday">Data de Nascimento</label>
+                <input type="date" id="input-birthday" name="input-birthday" class="input">
+
+                <div id="mensagem"></div>
+                <button id="botao-cadastrar" class="botao" onclick="cadastrar()">Cadastrar</button>
+
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
